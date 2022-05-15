@@ -1,4 +1,4 @@
-Dipenkumar Prajapati
+Dipen Prajapati
 Theme: Travel 
 
 # DPrajapatiTravel
