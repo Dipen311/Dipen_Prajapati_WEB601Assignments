@@ -1,1 +1,7 @@
-<p>content-list works!</p>
+<h1>{{title}}</h1>
+
+
+<app-content-card *ngFor = "let item of travelList; index as i; first as isFirst" 
+[travelItem] = "item" [class.is-first]="isFirst">
+
+</app-content-card>
