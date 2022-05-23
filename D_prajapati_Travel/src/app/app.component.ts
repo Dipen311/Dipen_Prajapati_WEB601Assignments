@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Content } from './models/content';
-import { List } from './models/list';
+
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,10 @@ import { List } from './models/list';
 })
 export class AppComponent {
   title = 'D_prajapati_travel';
-  myList: List;
+
 
   constructor() {
     let contentitem: Content;
-    this.myList = new List();
 
     contentitem = {
       id: 0,
@@ -22,7 +21,6 @@ export class AppComponent {
       imageLink: "https://www.planetware.com/wpimages/2021/07/maldives-best-all-inclusive-resorts-hurawalhi-island-resort-villa.jpg",
       type: "Beach area",
     };
-    this.myList.addContent(contentitem);
     contentitem = {
       id: 1,
       title: 'Dubai',
@@ -30,7 +28,6 @@ export class AppComponent {
       imageLink: "https://cdn.britannica.com/15/189715-050-4310222B/Dubai-United-Arab-Emirates-Burj-Khalifa-top.jpg",
       type: "Advanture",
     };
-    this.myList.addContent(contentitem);
     contentitem = {
       id: 2,
       title: 'Abu dhabi',
@@ -39,7 +36,7 @@ export class AppComponent {
       type: "Amazing country",
 
     };
-    this.myList.addContent(contentitem);
+    
     contentitem = {
       id: 3,
       title: 'Singapor',
@@ -47,7 +44,6 @@ export class AppComponent {
       imageLink: "https://cdn.cnn.com/cnnnext/dam/assets/191212182124-04-singapore-buildings.jpg",
       type: "Adventure",
     };
-    this.myList.addContent(contentitem);
 
   }
 }
