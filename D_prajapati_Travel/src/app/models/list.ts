@@ -25,7 +25,6 @@ export class List {
     }
     return `<div class="content-wrapper">
               <h1>${this._items[index].title}</h1>
-              <p>${this._items[index].body}</p>
               <h6>${this._items[index].author}</h6>
               <img src="${this._items[index].imageLink}">
               <div>${this._items[index].type}</div>
