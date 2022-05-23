@@ -1,8 +1,10 @@
 export interface Content {
-    readonly id: number;
+    id: number;
     title: string;
     body?: string;
+    author: string;
     imageLink?: string;
     type: string;
-    hsshyags?: string[];
-}
+    hashtags?: string[];
+  }
+  

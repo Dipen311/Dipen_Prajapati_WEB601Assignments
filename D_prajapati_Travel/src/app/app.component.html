@@ -1,47 +1,6 @@
-<div class="center">
-  <div>
-    Title : {{individualContentItem.title}}
-  </div>
-  <div class="image-wrapper">
-    Image link is: <img [src]="individualContentItem.imageLink">
-  </div>
-  <div>
-    Body : <strong>{{ individualContentItem.type }}</strong><br>
-  </div>
-</div>
-
-<div class="center">
-  <div>
-    Title : {{individualContentItem1.title}}
-  </div>
-  <div class="image-wrapper">
-    Image link is: <img [src]="individualContentItem1.imageLink">
-  </div>
-  <div>
-    Body : <strong>{{ individualContentItem1.type }}</strong><br>
-  </div>
-</div>
-
-<div class="center">
-  <div>
-    Title : {{individualContentItem2.title}}
-  </div>
-  <div class="image-wrapper">
-    Image link is: <img [src]="individualContentItem2.imageLink">
-  </div>
-  <div>
-    Body : <strong>{{ individualContentItem2.type }}</strong><br>
-  </div>
-</div>
-
-<div class="center">
-  <div>
-    Title : {{individualContentItem3.title}}
-  </div>
-  <div class="image-wrapper">
-    Image link is: <img [src]="individualContentItem3.imageLink">
-  </div>
-  <div>
-    Body : <strong>{{ individualContentItem3.type }}</strong><br>
-  </div>
-</div>
+<span [innerHTML]="myList.printProperties(0)"></span>
+<span [innerHTML]="myList.printProperties(1)"></span>
+<span [innerHTML]="myList.printProperties(2)"></span>
+<span [innerHTML]="myList.printProperties(3)"></span>
+<span [innerHTML]="myList.printProperties(-1)"></span>
+<span [innerHTML]="myList.printProperties(6)"></span>
