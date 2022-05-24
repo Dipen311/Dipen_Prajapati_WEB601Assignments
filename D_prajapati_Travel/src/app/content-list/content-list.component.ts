@@ -31,13 +31,6 @@ export class ContentListComponent implements OnInit {
       type: "Amazing country"
     },
     {
-      id:3,
-      title:'India',
-      author: "Dipen",
-      imageLink: 'https://i.natgeofe.com/k/42e832f5-fd48-43ff-b338-091bdf4048ca/india-tajmahal_16x9.jpg',
-      type: "Amazing country"
-    },
-    {
       id: 3,
       title: 'Singapor',
       author: "Dipen",
