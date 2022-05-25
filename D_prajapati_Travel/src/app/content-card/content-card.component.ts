@@ -14,4 +14,9 @@ export class ContentCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  printConsole(){
+    console.log(this.travelItem?.author);
+    console.log(this.travelItem?.id);
+  }
+
 }
