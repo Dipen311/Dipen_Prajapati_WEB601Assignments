@@ -1,5 +1,7 @@
 :host{
     
+    
+
     .card{
     border: 2px solid black;
     width: 400px;
@@ -9,19 +11,22 @@
     margin: 0 auto;
     margin-bottom: 10px;
     }
-    .title{
-        font-size: large;
-        color: blueviolet;
 
-    }
     img{
         display: block;
         margin: 0 auto;
         width: 200px;
     }
-}
-:host.is-first{
-    .card{
-    border: 5px solid black ;
+    .title{
+        font-size: large;
+        color: blueviolet;
+        text-align: center;
+    
     }
+    &.even{
+        background-color: rgb(168, 36, 36);
+        text-align: right;
+    }
+
 }
+

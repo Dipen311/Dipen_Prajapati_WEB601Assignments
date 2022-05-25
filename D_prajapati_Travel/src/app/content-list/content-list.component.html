@@ -1,7 +1,6 @@
-<h1>{{title}}</h1>
+<h1 style="text-align:center;">{{title}}</h1>
 
 
-<app-content-card *ngFor = "let item of travelList; index as i; first as isFirst" 
-[travelItem] = "item" [class.is-first]="isFirst">
-
+<app-content-card *ngFor = "let item of travelList; index as i; even as isEven"
+[travelItem] = "item"  [class.even]="isEven">
 </app-content-card>
