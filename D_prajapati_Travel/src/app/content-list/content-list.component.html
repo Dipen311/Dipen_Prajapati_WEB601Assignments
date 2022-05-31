@@ -1,6 +1,30 @@
-<h1 style="text-align:center;">{{title}}</h1>
+<h1>{{title}}</h1>
 
+<div>
+    <input #titleValue>
+    <button (click)="updatePage(titleValue.value)">Submit</button>
+    <p class="greentext" *ngIf="itsAvailable">{{ itsAvailable }}</p>
+    <p class="redtext" *ngIf="itsNotAvailable">{{ itsNotAvailable }}</p>
+   
+</div>
 
+<!-- 
 <app-content-card *ngFor = "let item of travelList; index as i; even as isEven"
 [travelItem] = "item"  [class.even]="isEven">
+</app-content-card> -->
+
+<h2>Adventure Tour</h2>
+<app-content-card *ngFor = "let item of (travelList | traveltype:'adventure'  ); index as i" 
+[travelItem] = "item" [class.adventure] = "i+1">
+</app-content-card>
+
+<h2>Honeymoon Tour</h2>
+<app-content-card *ngFor = "let item of (travelList | traveltype:'Honeymoon' ); index as i" 
+[travelItem] = "item" [class.honeymoon]="i+1">
+</app-content-card>
+
+<h2>without type Tour</h2>
+<app-content-card *ngFor = "let item of (travelList | traveltype ); index as i" 
+[travelItem] = "item" >
+
 </app-content-card>
