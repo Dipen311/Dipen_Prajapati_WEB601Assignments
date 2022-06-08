@@ -1,9 +1,20 @@
 <div class="card">
     <header>
-        <div class="title">{{ travelItem ? travelItem.title : "" }}</div><br>
+        <div class="title" appHighlightTitle="clickeffect">{{ travelItem ? travelItem.title : "" }}</div><br>
     </header>
     <div class="author">{{ travelItem ? travelItem.author : "" }}</div><br>
-    <div (click)="printConsole()"><img [src]="travelItem ? travelItem.imageLink : ''"></div><br>
+
+    <img (click)="printConsole()" *ngIf="travelItem?.imageLink" class="image" [src]="travelItem?.imageLink">
+    <img (click)="printConsole()" *ngIf="!travelItem?.imageLink" class="image"
+    src="https://bitsofco.de/content/images/2018/12/broken-1.png"> <!-- default image --><br>
+
+    <div class="type" appHighlightImportantData = "bordermaker">{{ travelItem ? travelItem.type : "" }}</div><br>
+
+    <div class="hashtags" *ngIf="travelItem?.hashtags">
+        <span appHighlightImportantData ="colorchange" class="hashtag" *ngFor="let tag of travelItem?.hashtags">
+            #{{ tag }}
+        </span>
+    </div>
 </div>
 
 
