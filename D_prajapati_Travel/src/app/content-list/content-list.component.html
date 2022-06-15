@@ -13,6 +13,8 @@
 [travelItem] = "item"  [class.even]="isEven">
 </app-content-card> -->
 
+
+
 <h2>Adventure Tour</h2>
 <app-content-card *ngFor = "let item of (travelList | traveltype:'adventure'  ); index as i" 
 [travelItem] = "item" [class.adventure] = "i+1">
