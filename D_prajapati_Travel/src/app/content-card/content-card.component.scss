@@ -38,3 +38,10 @@
 
 }
 
+:host.singleTravel{
+ .card{
+     margin: 15px;
+    border: 5px solid red;
+    box-shadow: 5px 10px lightgreen;
+ }   
+}

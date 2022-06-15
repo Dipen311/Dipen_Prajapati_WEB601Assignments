@@ -12,7 +12,7 @@
 <app-content-card *ngFor = "let item of travelList; index as i; even as isEven"
 [travelItem] = "item"  [class.even]="isEven">
 </app-content-card> -->
-
+<app-content-card *ngIf="singleTravel" [travelItem]="singleTravel" [class.singleTravel] = "singleTravel" > </app-content-card>
 
 
 <h2>Adventure Tour</h2>
