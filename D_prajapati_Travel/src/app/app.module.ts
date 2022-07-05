@@ -8,6 +8,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { TraveltypePipe } from './traveltype.pipe';
 import { HighlightImportantDataDirective } from './directive/highlight-important-data.directive';
 import { HighlightTitleDirective } from './directive/highlight-title.directive';
+import { ContentDetailsComponent } from './content-details/content-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HighlightTitleDirective } from './directive/highlight-title.directive';
     ContentCardComponent,
     TraveltypePipe,
     HighlightImportantDataDirective,
-    HighlightTitleDirective
+    HighlightTitleDirective,
+    ContentDetailsComponent
   ],
   imports: [
     BrowserModule,
