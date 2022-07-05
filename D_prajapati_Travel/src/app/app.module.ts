@@ -10,6 +10,7 @@ import { HighlightImportantDataDirective } from './directive/highlight-important
 import { HighlightTitleDirective } from './directive/highlight-title.directive';
 import { ContentDetailsComponent } from './content-details/content-details.component';
 import { ContentSearchComponent } from './content-search/content-search.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContentSearchComponent } from './content-search/content-search.componen
     HighlightImportantDataDirective,
     HighlightTitleDirective,
     ContentDetailsComponent,
-    ContentSearchComponent
+    ContentSearchComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
