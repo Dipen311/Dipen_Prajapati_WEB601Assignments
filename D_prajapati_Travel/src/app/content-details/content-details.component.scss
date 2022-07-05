@@ -1,0 +1,47 @@
+:host{
+    
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    .card{
+    border: 2px solid black;
+   
+   
+    text-align: center;
+   
+    
+    }
+
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+    }
+    .title{
+        font-size: large;
+        color: rgb(180, 226, 43);
+        text-align: center;
+    
+    }
+
+    .bordermaker{
+        border: 2px solid rgb(56, 191, 29);
+    }
+
+    .colorchange{
+        color: rgb(247, 141, 11);
+    }
+    .clickeffect{
+        background-color: rgb(9, 69, 121);
+    }
+
+}
+
+:host.singleTravel{
+ .card{
+     margin: 15px;
+    border: 5px solid red;
+    box-shadow: 5px 10px lightgreen;
+ }   
+}
