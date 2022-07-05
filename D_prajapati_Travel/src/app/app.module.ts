@@ -9,6 +9,7 @@ import { TraveltypePipe } from './traveltype.pipe';
 import { HighlightImportantDataDirective } from './directive/highlight-important-data.directive';
 import { HighlightTitleDirective } from './directive/highlight-title.directive';
 import { ContentDetailsComponent } from './content-details/content-details.component';
+import { ContentSearchComponent } from './content-search/content-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContentDetailsComponent } from './content-details/content-details.compo
     TraveltypePipe,
     HighlightImportantDataDirective,
     HighlightTitleDirective,
-    ContentDetailsComponent
+    ContentDetailsComponent,
+    ContentSearchComponent
   ],
   imports: [
     BrowserModule,
