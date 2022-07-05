@@ -10,15 +10,18 @@ import { TravelDataService } from '../services/travel-data.service';
 export class ContentDetailsComponent implements OnInit {
 
   id?:number;
-  tItem?:Content;
+  travelItem?:Content;
   constructor(private route: ActivatedRoute, private travelService:TravelDataService) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params =>{
       this.id=Number(params.get('id') ?? "0");
-      this.tItem  = this.travelService.getSingleItem(this.id);
+      this.travelItem  = this.travelService.getSingleItem(this.id);
     });
   }
-  
+  printConsole(){
+    console.log(this.travelItem?.author);
+    console.log(this.travelItem?.id);
+  }
 
 }

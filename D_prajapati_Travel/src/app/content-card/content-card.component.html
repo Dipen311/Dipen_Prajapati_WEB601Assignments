@@ -1,8 +1,12 @@
 <div class="card">
     <header>
-        <div class="title" appHighlightTitle="clickeffect">{{ travelItem ? travelItem.title : "" }}</div><br>
+        <div class="title" appHighlightTitle="clickeffect">{{ travelItem ? travelItem.title : "" }}
+            <a [routerLink]="['/detail', travelItem?.id ?? 0]" routerLinkActive="active">
+                {{ travelItem ? travelItem.title : "" }}
+              </a>
+        </div><br>
     </header>
-    <div class="author">{{ travelItem ? travelItem.author : "" }}</div><br>
+
 
     <img (click)="printConsole()" *ngIf="travelItem?.imageLink" class="image" [src]="travelItem?.imageLink">
     <img (click)="printConsole()" *ngIf="!travelItem?.imageLink" class="image"
@@ -10,11 +14,6 @@
 
     <div class="type" appHighlightImportantData = "bordermaker">{{ travelItem ? travelItem.type : "" }}</div><br>
 
-    <div class="hashtags" *ngIf="travelItem?.hashtags">
-        <span appHighlightImportantData ="colorchange" class="hashtag" *ngFor="let tag of travelItem?.hashtags">
-            #{{ tag }}
-        </span>
-    </div>
 </div>
 
 
