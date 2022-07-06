@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Content } from '../models/content';
+import { TravelDataService } from '../services/travel-data.service';
+
 @Component({
   selector: 'app-content-search',
   templateUrl: './content-search.component.html',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentSearchComponent implements OnInit {
 
-  constructor() { }
+  individualTravel?: Content;
+  constructor(private travelService: TravelDataService) { }
 
   ngOnInit(): void {
+
+  }
+  checkForIdInList(idValue: string): void {
+    this.individualTravel = this.travelService.getSingleItem(Number(idValue));
   }
 
+  
 }

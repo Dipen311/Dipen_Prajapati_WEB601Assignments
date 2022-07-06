@@ -1,5 +1,4 @@
 import { Content } from "../models/content";
-
 export const travelList: Content[] = [{
     id: 1,
     title: 'Maldives',

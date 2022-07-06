@@ -1,6 +1,6 @@
 <div class="card">
     <header>
-        <div class="title" appHighlightTitle="clickeffect">{{ travelItem ? travelItem.title : "" }}
+        <div class="title" appHighlightTitle="clickeffect">
             <a [routerLink]="['/detail', travelItem?.id ?? 0]" routerLinkActive="active">
                 {{ travelItem ? travelItem.title : "" }}
               </a>

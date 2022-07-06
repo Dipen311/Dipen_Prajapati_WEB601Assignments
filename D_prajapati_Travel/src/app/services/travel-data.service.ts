@@ -12,7 +12,7 @@ export class TravelDataService {
     return travelList;
   }
   getSingleItem(id: number): Content{
-    return travelList[id];
+    return travelList[(id-1)];
   }
   addContent(newContent: Content): Content[]{
     travelList.push(newContent);
