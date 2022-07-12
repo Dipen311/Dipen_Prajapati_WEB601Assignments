@@ -18,9 +18,14 @@ export class TravelDataService {
     travelList.push(newContent);
     return travelList;
   }
-  updateContent(id : number, newContent: Content): Content[]{
-    travelList[id] = newContent;
-    return travelList;
+  updateContent(newContent: Content, id ?: number): Content[]{
+    if(id == undefined){
+      return travelList;
+    }else{
+      travelList[id] = newContent;
+      return travelList;
+    }
+    
   }
   removeContent(id:number): Content{
     let removedContent: Content;

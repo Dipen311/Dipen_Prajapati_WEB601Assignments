@@ -1,0 +1,26 @@
+:host {
+    margin: 0 auto;
+    .nav{
+        background-color: rgb(201, 201, 107);
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+      a {
+        padding: 16px;
+        display: inline-block;
+  
+        &:hover,
+        &.active {
+          background-color: rgb(145, 201, 196);
+          color: rgb(0, 0, 0);
+        }
+  
+      }
+    }
+  }
+  

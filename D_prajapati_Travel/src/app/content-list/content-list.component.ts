@@ -56,7 +56,6 @@ export class ContentListComponent implements OnInit {
     this.travelList = this.travelService.getContent();
     this.singleTravel = this.travelService.getSingleItem(5);
 
-    throw new Error('Method not implemented.');
     
   }
 

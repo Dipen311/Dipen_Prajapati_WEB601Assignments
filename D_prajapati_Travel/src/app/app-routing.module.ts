@@ -26,6 +26,10 @@ const routes: Routes = [
     component: ContentDetailsComponent,
   },
   {
+    path:"updateContent/:id",
+    component: ContentChangeComponent,
+  },
+  {
     path:"search",
     component: ContentSearchComponent,
   },

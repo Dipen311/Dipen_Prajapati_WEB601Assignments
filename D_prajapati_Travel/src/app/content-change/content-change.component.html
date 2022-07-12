@@ -1,1 +1,11 @@
-<p>content-change works!</p>
+<app-content-link></app-content-link>
+
+<div id="formcss">
+    <label>ID (for updating):<input type="number" [(ngModel)]="contentItem.id"></label><br>
+    <label>Name:<input [(ngModel)]="contentItem.title"></label><br>
+    <label>Type:<input [(ngModel)]="contentItem.type"></label><br>
+    <label>Image URL:<input [(ngModel)]="contentItem.imageLink"></label><br>
+    <label>Body:<textarea [(ngModel)]="contentItem.body"></textarea></label><br>
+    <label>Tags:<input [(ngModel)]="tempTags"></label><br>
+    <button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">Add new content</button><br>
+</div>

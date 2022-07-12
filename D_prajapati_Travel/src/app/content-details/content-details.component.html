@@ -1,4 +1,5 @@
 <app-content-link></app-content-link>
+
 <div class="card">
     <header>
         <div class="title" appHighlightTitle="clickeffect">{{ travelItem ? travelItem.title : "" }}</div><br>
@@ -19,6 +20,11 @@
     <div>
         <a [routerLink]="['/list']" routerLinkActive="active">
             back to list
+          </a>
+    </div>
+    <div>
+        <a [routerLink]="['/updateContent', travelItem?.id ?? 0]" routerLinkActive="active">
+            Update Content
           </a>
     </div>
 </div>
