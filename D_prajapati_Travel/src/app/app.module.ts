@@ -15,6 +15,7 @@ import { ContentLinkComponent } from './content-link/content-link.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from "./services/in-memory-data.service";
+import { ContentChangeComponent } from './content-change/content-change.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     ContentDetailsComponent,
     ContentSearchComponent,
     PagenotfoundComponent,
-    ContentLinkComponent
+    ContentLinkComponent,
+    ContentChangeComponent
   ],
   imports: [
     BrowserModule,
