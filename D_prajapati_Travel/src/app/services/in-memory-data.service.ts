@@ -10,10 +10,15 @@ export class InMemoryDataService {
   constructor() { }
   createDb() {
     // setting it to the value of our array of content
-    const chess: Content[] = travelList;
+    const travel: Content[] = travelList;
     return {
-      chess: chess
+      travel: travel
     };
+  }
+
+  genId(content: Content[]): number {
+    return content.length > 0 ?
+      Math.max(...content.map(c => c.id || 0)) + 1 : 0;
   }
 
 }
