@@ -1,4 +1,5 @@
 export interface Content {
+    tags: string[];
   
     id?: number;
     title: string;
