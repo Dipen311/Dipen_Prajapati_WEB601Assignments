@@ -12,6 +12,9 @@ import { ContentDetailsComponent } from './content-details/content-details.compo
 import { ContentSearchComponent } from './content-search/content-search.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ContentLinkComponent } from './content-link/content-link.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from "./services/in-memory-data.service";
 
 @NgModule({
   declarations: [
@@ -28,7 +31,12 @@ import { ContentLinkComponent } from './content-link/content-link.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {
+      delay: 1000,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
