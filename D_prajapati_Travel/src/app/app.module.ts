@@ -11,6 +11,7 @@ import { HighlightTitleDirective } from './directive/highlight-title.directive';
 import { ContentDetailsComponent } from './content-details/content-details.component';
 import { ContentSearchComponent } from './content-search/content-search.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ContentLinkComponent } from './content-link/content-link.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     HighlightTitleDirective,
     ContentDetailsComponent,
     ContentSearchComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    ContentLinkComponent
   ],
   imports: [
     BrowserModule,
