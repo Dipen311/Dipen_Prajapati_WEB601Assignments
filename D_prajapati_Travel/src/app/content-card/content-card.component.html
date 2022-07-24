@@ -1,19 +1,24 @@
+<mat-card>
 <div class="card">
     <header>
-        <div class="title" appHighlightTitle="clickeffect">
-            <a [routerLink]="['/detail', travelItem?.id ?? 0]" routerLinkActive="active">
+        <div  appHighlightTitle="clickeffect">
+            <mat-card-title>
+            <a class="title" [routerLink]="['/detail', travelItem?.id ?? 0]" routerLinkActive="active">
                 {{ travelItem ? travelItem.title : "" }}
               </a>
+            </mat-card-title>
         </div><br>
     </header>
 
 
-    <img (click)="printConsole()" *ngIf="travelItem?.imageLink" class="image" [src]="travelItem?.imageLink">
-    <img (click)="printConsole()" *ngIf="!travelItem?.imageLink" class="image"
+    <img mat-card-image (click)="printConsole()" *ngIf="travelItem?.imageLink" class="image" [src]="travelItem?.imageLink">
+    <img mat-card-image (click)="printConsole()" *ngIf="!travelItem?.imageLink" class="image"
     src="https://bitsofco.de/content/images/2018/12/broken-1.png"> <!-- default image --><br>
 
-    <div class="type" appHighlightImportantData = "bordermaker">{{ travelItem ? travelItem.type : "" }}</div><br>
+    <mat-card-content>   
+        <div class="type" appHighlightImportantData = "bordermaker">{{ travelItem ? travelItem.type : "" }}</div><br>
+    </mat-card-content>
 
 </div>
-
+</mat-card>
 

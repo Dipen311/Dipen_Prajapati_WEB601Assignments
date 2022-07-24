@@ -5,17 +5,20 @@
 <div>
     <mat-form-field>   <input matInput placeholder="Title" #titleValue> </mat-form-field>
  
-    <button mat-raised-button (click)="updatePage(titleValue.value)">Submit</button>
+    <button  mat-raised-button
+    (click)="updatePage(titleValue.value)">Submit</button>
     <p class="greentext" *ngIf="itsAvailable">{{ itsAvailable }}</p>
     <p class="redtext" *ngIf="itsNotAvailable">{{ itsNotAvailable }}</p>
    
 </div>
 
+
+
 <!-- 
 <app-content-card *ngFor = "let item of travelList; index as i; even as isEven"
 [travelItem] = "item"  [class.even]="isEven">
 </app-content-card> -->
-<app-content-card *ngIf="singleTravel" [travelItem]="singleTravel" [class.singleTravel] = "singleTravel" > </app-content-card>
+<app-content-card  mat-card *ngIf="singleTravel" [travelItem]="singleTravel" [class.singleTravel] = "singleTravel" > </app-content-card>
 
 
 <h2>Adventure Tour</h2>
