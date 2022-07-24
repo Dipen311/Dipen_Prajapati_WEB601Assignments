@@ -2,9 +2,11 @@
 <div class="chess-search">
     <label>
       Travel Search ID from 1 to 9:
-      <input type="number" autofocus #idNumber>
+      <mat-form-field>
+      <input matInput type="number" autofocus #idNumber>
+    </mat-form-field>
     </label>
     <br>
-    <button (click)="checkForIdInList(idNumber.value)">Check for Travel at id</button>
+    <button mat-raised-button (click)="checkForIdInList(idNumber.value)">Check for Travel at id</button>
   </div>
   <app-content-card [travelItem]="individualTravel" class="single-item-on-app-component"></app-content-card>

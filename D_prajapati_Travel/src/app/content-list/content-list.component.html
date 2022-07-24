@@ -3,8 +3,9 @@
 
 <h1>{{title}}</h1>
 <div>
-    <input #titleValue>
-    <button (click)="updatePage(titleValue.value)">Submit</button>
+    <mat-form-field>   <input matInput placeholder="Title" #titleValue> </mat-form-field>
+ 
+    <button mat-raised-button (click)="updatePage(titleValue.value)">Submit</button>
     <p class="greentext" *ngIf="itsAvailable">{{ itsAvailable }}</p>
     <p class="redtext" *ngIf="itsNotAvailable">{{ itsNotAvailable }}</p>
    

@@ -1,11 +1,24 @@
 <app-content-link></app-content-link>
 
 <div id="formcss">
-    <label>ID (for updating):<input type="number" [(ngModel)]="contentItem.id"></label><br>
-    <label>Name:<input [(ngModel)]="contentItem.title"></label><br>
-    <label>Type:<input [(ngModel)]="contentItem.type"></label><br>
-    <label>Image URL:<input [(ngModel)]="contentItem.imageLink"></label><br>
-    <label>Body:<textarea [(ngModel)]="contentItem.body"></textarea></label><br>
-    <label>Tags:<input [(ngModel)]="tempTags"></label><br>
-    <button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">Add new content</button><br>
+    <mat-form-field> 
+    <label>ID (for updating):<input matInput type="number" [(ngModel)]="contentItem.id"></label>
+    </mat-form-field><br>
+    <mat-form-field> 
+    <label>Name:<input matInput [(ngModel)]="contentItem.title"></label>
+</mat-form-field><br>
+<mat-form-field >
+    <label>Type:<input matInput [(ngModel)]="contentItem.type"></label>
+</mat-form-field><br>
+<mat-form-field>
+    <label>Image URL:<input matInput [(ngModel)]="contentItem.imageLink"></label>
+</mat-form-field><br>
+<mat-form-field>
+    <label>Body:<textarea matInput [(ngModel)]="contentItem.body"></textarea></label>
+</mat-form-field><br>
+<mat-form-field>
+    <label>Tags:<input matInput [(ngModel)]="tempTags"></label>
+</mat-form-field><br>
+
+    <button mat-raised-button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">Add new content</button><br>
 </div>
