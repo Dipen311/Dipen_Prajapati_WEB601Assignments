@@ -1,13 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
 import { Content } from '../models/content';
 import { TravelDataService } from '../services/travel-data.service';
-
+import {map, startWith} from 'rxjs/operators';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
+
+  myControl = new FormControl('');
+  options: string[] = ['One', 'Two', 'Three'];
+  filteredOptions: Observable<string[]> | undefined;
+
+
   temp = false;
   itsAvailable = "";
   itsNotAvailable = "";
@@ -55,8 +63,17 @@ export class ContentListComponent implements OnInit {
     
     this.travelList = this.travelService.getContent();
     this.singleTravel = this.travelService.getSingleItem(5);
-
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value || '')),
+    );
     
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
   updatePage(cardNameOnTheTypescriptSide: string): void {

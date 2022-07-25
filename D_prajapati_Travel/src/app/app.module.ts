@@ -25,7 +25,9 @@ import { MatRippleModule} from '@angular/material/core';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
-//import { ServiceWorkerModule } from '@angular/service-worker';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 
@@ -60,6 +62,8 @@ import { environment } from '../environments/environment';
     MatDividerModule,
     MatListModule,
     MatIconModule,
+    MatSnackBar,
+    MatAutocompleteModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
